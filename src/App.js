@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from "react";
+import ChildScreenshots from "./Screenshots";
 
 function App() {
+  // URLs reales de thumbnails
+  const realChildScreenshots = [
+    { id: 1, thumbnail: "https://picsum.photos/200/300/?random" },
+    { id: 2, thumbnail: "https://picsum.photos/200/300/?random" },
+    { id: 3, thumbnail: "https://picsum.photos/200/300/?random" },
+    // Agrega tus propias URLs de imágenes reales
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChildScreenshots screenshots={realChildScreenshots} />
     </div>
   );
 }
